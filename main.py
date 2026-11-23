@@ -38,7 +38,7 @@ def on_batch(state, batch):
             return [{
                 "side": "sell",
                 "symbol": sym,
-                "amount": str(held.qty),
+                "qty": str(held.qty),
                 "max_slippage_bps": 10_000,
             }]
         return []
@@ -48,7 +48,7 @@ def on_batch(state, batch):
         return [{
             "side": "buy",
             "symbol": sym,
-            "amount": str(state.cash),
+            "notional_quote_units": str(state.cash),
             "max_slippage_bps": 10_000,
         }]
     return []
