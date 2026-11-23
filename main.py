@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "ven
 import makefun_bars  # noqa: E402  (vendored kit SDK shim under vendor/)
 
 SYMBOL = "CBBTC"
-TRAIL_BPS = 500  # 5.00% trailing stop below the peak close since entry
+TRAIL_BPS = 500  # 5.00% trailing stop below the peak close since entry (revised on second pass)
 MIN_NOTIONAL = 1_000_000  # 1 USDC in quote units
 
 STATE = {"stopped": False, "peak": None}
